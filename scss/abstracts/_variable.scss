@@ -1,0 +1,92 @@
+$font-main: "Afacad",
+    sans-serif;
+$font-sora: "Sora",
+    sans-serif;
+$font-2: "Ballet",
+    cursive;
+$fontIcon: "icomoon";
+
+:root {
+    // color
+    --white: #ffffff;
+    --black: #000000;
+    // --main: #1F1F1F;
+
+    --primary: #0da100;
+    --secondary: #D7EB3A;
+    --third: rgba(44, 129, 83, 1);
+
+    --text: #5F615E;
+    --text-2: #8A8C8A;
+    --text-3: #ACAFAB;
+    --text-4: #E4E4E4;
+    --text-5: #FFFFFF80;
+    --text-6: #00000080; //opacity 50%
+    --text-7: #B3907A;
+
+    --bg: #E4E4E4;
+    --bg-2: #F5F5F5;
+    --bg-3: #021A62;
+    --bg-4: #534696;
+    --bg-5: #C8A07C;
+    --bg-6: #B2CBEA;
+    --bg-7: #EC6E1A;
+    --bg-8: #FAFAFA;
+    --bg-9: #F6F4F1;
+    --bg-10: #C8102E12;
+    --bg-11: #EEDFC6;
+    --bg-12: #F7F7F7;
+    --bg-13: #F8F8F8;
+    --bg-14: #4F684C;
+    --bg-15: #42514A;
+    --bg-16: #F7EDE4;
+    --bg-17: #FAFAFD;
+
+
+    --line: #EDEDED;
+    --line-2: #FFFFFF33; //opacity 20%
+    --line-3: #FFFFFF1A; //opacity 10%
+    --line-4: #FFFFFF80; //opacity 50%
+    --line-5: #FFFFFFB3; //opacity 70%
+    --line-6: #E7E7E7;
+    --line-7: #E2E2E2;
+    --line-8: #00000012; //opacity 7%
+    --line-9: #FFFFFF4D; //opacoty 30%
+    --line-10: #ECECEC;
+
+    --shadow-1: #A3A3A340;
+
+    --linear-1: linear-gradient(180deg, rgba(246, 221, 190, 0) 0%, rgba(246, 221, 190, 0.5) 100%);
+    --linear-2: linear-gradient(137.6deg, #C09C71 23.87%, #664B18 99.83%);
+    --linear-3: linear-gradient(285.63deg, #4B2C17 5.45%, #905E3D 94.52%);
+    --linear-4: linear-gradient(133.57deg, #FFF0D3 25.62%, #EBD1A2 100%);
+    --linear-5: linear-gradient(138.03deg, #FFF3E5 23.68%, #FFCDA2 100%);
+
+    --verified: #00BF43;
+    --success: #28A745;
+    --error: #ff4949;
+}
+
+.primary {
+    --primary: #C8102E;
+}
+
+.primary-2 {
+    --primary: #007a41;
+}
+
+.primary-3 {
+    --primary: rgb(67, 107, 228);
+}
+
+.primary-4 {
+    --primary: rgb(104, 91, 199);
+}
+
+.primary-5 {
+    --primary: rgb(232, 83, 49);
+}
+
+.primary-6 {
+    --primary: rgb(88, 126, 87);
+}

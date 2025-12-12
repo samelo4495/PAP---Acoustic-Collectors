@@ -1,0 +1,200 @@
+@use "../abstracts/index"as *;
+
+
+
+.widget-accordion {
+    border-bottom: 1px solid var(--line);
+
+    .accordion-title {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 32px 0px;
+        font-weight: 400;
+        font-size: clamp(20px, 3vw, 28px);
+        line-height: clamp(26px, 3.2vw, 32px);
+        text-transform: uppercase;
+        cursor: pointer;
+        @include transition3;
+
+        @include res(md) {
+            padding: 20px 0px;
+        }
+
+        .icon {
+            font-size: clamp(16px, 3vw, 22px);
+            transition: transform 0.35s linear;
+        }
+
+        &:not(.collapsed) {
+            color: var(--primary);
+
+            .icon {
+                transform: rotate(-90deg);
+            }
+        }
+    }
+
+    .accordion-body {
+        padding: 10px 0px 20px;
+    }
+
+    &:first-child {
+        border-top: 1px solid var(--line);
+    }
+
+    &.style-2 {
+        .accordion-title {
+
+            padding: 16px 0px;
+            justify-content: space-between;
+            font-size: 18px;
+            line-height: 28px;
+
+            .icon {
+                font-size: 16px;
+            }
+        }
+
+        &:first-child {
+            border-top: unset;
+        }
+    }
+}
+
+
+.ic-accordion-custom {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    @include flex(center, center);
+    transition: transform 0.35s linear;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--black);
+        @include transition3;
+        border-radius: 2px;
+    }
+
+    &::before {
+        height: 100%;
+        width: 2px;
+    }
+
+    &::after {
+        height: 2px;
+        width: 100%;
+    }
+}
+
+.accor-mn-pl {
+    .accordion-title {
+        @include flex(center, space-between);
+        @include transition3;
+
+        .ic-accordion-custom {
+            &::before {
+                transform: rotate(90deg);
+            }
+
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &.collapsed {
+            .ic-accordion-custom {
+
+                &::before {
+                    transform: rotate(0deg);
+
+                }
+
+                &::after {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+}
+
+.accordion-faq {
+    .icon {
+        width: 30px;
+        height: 30px;
+        @include flex(center, center);
+        border-radius: 50%;
+        background-color: var(--black);
+        border-color: var(--black);
+        @include transition3;
+        flex-shrink: 0;
+    }
+
+    .accordion-title {
+        @include flex(center, space-between);
+        @include transition3;
+        margin-bottom: 22px;
+        gap: 10px;
+
+        .text {
+            color: var(--black);
+            font-weight: 500;
+            @include transition3;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box !important;
+            overflow: hidden;
+        }
+
+        .ic-accordion-custom {
+            &::before {
+                transform: rotate(90deg);
+                background-color: var(--white);
+            }
+
+            &::after {
+                transform: rotate(180deg);
+                background-color: var(--white);
+            }
+        }
+
+        &.collapsed {
+            margin-bottom: 0;
+
+            .text {
+                color: var(--text);
+                font-weight: 400;
+            }
+
+            .icon {
+                border: 1px solid var(--line);
+                background-color: transparent;
+            }
+
+            .ic-accordion-custom {
+
+                &::before {
+                    transform: rotate(0deg);
+                    background-color: var(--black);
+
+                }
+
+                &::after {
+                    transform: rotate(0deg);
+                    background-color: var(--black);
+
+                }
+            }
+        }
+    }
+
+    @include res(xl, min) {
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "5",
+  "remote": {
+    "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js": "9ced61d218fbee51fb508d2dd6ae4951577082de97875fba566592fcf54901b7",
+    "https://www.gstatic.com/firebasejs/11.0.1/firebase-database.js": "640776c3773070faeef7ca822396def5c9231854b82b89b75cca7877e770e82b"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:dotenv@^17.2.3",
+        "npm:firebase@^12.6.0"
+      ]
+    }
+  }
+}
